@@ -2,7 +2,7 @@
 float xball = 75;
 float yball = 350;
 float xnet = 100;
-float speed = 4;
+float speed = 7;
 float netspeed = speed * 1.5;
 int x = 0;
 boolean projectile = false;
@@ -47,7 +47,13 @@ void draw() {
   }
   if (keyPressed) {
     projectile = true;
-    if (xball > 0 && xball < 500) {
+    if (xball < 0) {
+      xball = xball + 50;
+    }
+    else if (xball > 600) {
+      xball = xball - 50;
+    }
+    else {
       if (key == 'd') {
         xball = xball + speed;
       }
@@ -55,5 +61,5 @@ void draw() {
         xball = xball - speed;
       }
     }
-  }
+   }
 }
