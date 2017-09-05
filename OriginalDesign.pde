@@ -2,7 +2,7 @@
 float xball = 75;
 float yball = 350;
 float xnet = 100;
-float speed = 7;
+float speed = 5;
 float netspeed = speed * 1.5;
 int x = 0;
 boolean projectile = false;
